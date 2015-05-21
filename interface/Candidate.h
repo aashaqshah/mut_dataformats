@@ -1,4 +1,6 @@
 
+#pragma once
+
 #include "Math/Vector4D.h"
 #include "Math/Vector4Dfwd.h"
 
