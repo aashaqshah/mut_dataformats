@@ -1,5 +1,7 @@
 
-#include "mut_framework/Dataformats/interface/Candidate.h"
+#pragma once
+
+#include "Candidate.h"
 
 namespace mut {
 
@@ -8,12 +10,12 @@ namespace mut {
 
     public:
       
+      typedef std::pair<std::string, float> Pair;
+      typedef std::vector<Pair> PairVector;
+
       // inherit constructors
       using mut::Candidate::Candidate;
-
-      typedef <std::pair<std::string, float> Pair 
-      typedef std::vector<Pair> PairVector 
-
+      
       bool hasLeptonID(const std::string &name) const; 
       float getLeptonID(const std::string &name) const; 
       const PairVector & getLeptonIDPairs() const { return idPairs_; } 
@@ -29,8 +31,11 @@ namespace mut {
     protected:
       // vector of pairs with id and iso info 
       PairVector idPairs_;
-      PairVector isoPairs_:  
+      PairVector isoPairs_;  
 
   };
+
+  
+  typedef std::vector<Lepton> LeptonCollection;
 
 }

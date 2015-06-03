@@ -1,5 +1,7 @@
 
-#include "mut_framework/Dataformats/interface/Candidate.h"
+#pragma once
+
+#include "Candidate.h"
 
 namespace mut {
 
@@ -11,9 +13,12 @@ namespace mut {
       // inherit constructors
       using mut::Candidate::Candidate;
 
+
     protected:  
 
       // TODO
 
-  }
+  };
+
+}
     
