@@ -1,6 +1,7 @@
 
 #pragma once
 
+#include <vector>
 #include "Math/Vector4D.h"
 #include "Math/Vector4Dfwd.h"
 
@@ -28,5 +29,7 @@ namespace mut {
       int pdgId_ = 0;  // PDG id
 
   };
+
+  typedef std::vector<mut::Candidate> CandidateCollection;
 
 }

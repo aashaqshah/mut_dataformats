@@ -1,6 +1,7 @@
 
 #pragma once
 
+#include <string>
 #include "Candidate.h"
 
 namespace mut {
