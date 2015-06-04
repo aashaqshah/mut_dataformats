@@ -34,7 +34,7 @@ namespace mut {
       PairVector idPairs_;
       PairVector disPairs_;
       // MC based flavours (0 if data/undefined)
-      int partonFlavour_;
+      int partonFlavour_ = 0;
 
   };
 

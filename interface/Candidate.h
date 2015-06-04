@@ -24,8 +24,8 @@ namespace mut {
       inline void setPdgId(int pdgId) { pdgId_ = pdgId; }
 
     protected:
-      int qx3_;    // threeCharge
-      int pdgId_;  // PDG id
+      int qx3_ = 0;    // threeCharge
+      int pdgId_ = 0;  // PDG id
 
   };
 

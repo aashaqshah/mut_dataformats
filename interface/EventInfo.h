@@ -44,7 +44,7 @@ namespace mut {
 
 
     protected:
-      bool isRealData_;
+      bool isRealData_ = false;
 
       unsigned int event_;
       unsigned int lumiBlock_;
