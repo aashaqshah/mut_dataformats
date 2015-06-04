@@ -1,0 +1,10 @@
+<lcgdict>
+  <class name="mut::EventInfo"/> 
+  <class name="mut::Candidate"/>
+  <class name="std::vector<mut::Candidate>"/>
+  <class name="mut::Lepton"/>
+  <class name="std::vector<mut::Lepton>"/>
+  <class name="mut::Jet"/>
+  <class name="std::vector<mut::Jet>"/>
+  <class name="mut::MET"/>
+</lcgdict>
