@@ -1,0 +1,9 @@
+CMakeCache.txt
+CMakeFiles
+*dict.cxx
+*rdict.pcm
+cmake_install.cmake
+Makefile
+lib
+bin
+
