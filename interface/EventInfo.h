@@ -18,6 +18,16 @@ namespace mut {
 
       EventInfo() {}
       EventInfo(unsigned int event, unsigned int lumiBlock, unsigned int run);
+      // copy constructor
+      EventInfo( const EventInfo& rhs) :
+        isRealData_(rhs.isRealData_),
+        event_(rhs.event_),
+        lumiBlock_(rhs.lumiBlock_),
+        run_(rhs.run_),
+        numPV_(rhs.numPV_),
+        filterPairs_(rhs.filterPairs_),
+        weightPairs_(rhs.weightPairs_) {}
+
       ~EventInfo() {}
 
       bool hasFilter(const std::string &name) const; 

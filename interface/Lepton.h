@@ -14,9 +14,16 @@ namespace mut {
       typedef std::pair<std::string, float> Pair;
       typedef std::vector<Pair> PairVector;
 
+      Lepton() : mut::Candidate() {} 
+      // copy constructor
+      Lepton(const Lepton& rhs) :
+        mut::Candidate(rhs),
+        idPairs_(rhs.idPairs_),
+        isoPairs_(rhs.isoPairs_) {}
+
       // inherit constructors
-      using mut::Candidate::Candidate;
-      
+      using mut::Candidate::Candidate;      
+
       bool hasLeptonID(const std::string &name) const; 
       float getLeptonID(const std::string &name) const; 
       const PairVector & getLeptonIDPairs() const { return idPairs_; } 

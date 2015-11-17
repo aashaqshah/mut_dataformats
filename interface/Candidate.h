@@ -12,7 +12,12 @@ namespace mut {
   class Candidate : public PtEtaPhiEVector {
 
     public:
-
+      Candidate() : PtEtaPhiEVector() {}
+      // copy constructor
+      Candidate( const Candidate& rhs) : 
+        PtEtaPhiEVector(rhs),
+        qx3_(rhs.qx3_),
+        pdgId_(rhs.pdgId_) {}
       // inherit constructors
       using PtEtaPhiEVector::PtEtaPhiEVector;
 

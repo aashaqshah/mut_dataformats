@@ -12,6 +12,14 @@ namespace mut {
       typedef std::pair<std::string, float> Pair;
       typedef std::vector<Pair> PairVector;
 
+      Jet() : mut::Candidate() {}
+      // copy constructor
+      Jet(const Jet& rhs) :
+        mut::Candidate(rhs),
+        idPairs_(rhs.idPairs_),
+        disPairs_(rhs.disPairs_),
+        partonFlavour_(rhs.partonFlavour_) {}
+
       // inherit constructors
       using mut::Candidate::Candidate;
 

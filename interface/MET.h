@@ -10,9 +10,10 @@ namespace mut {
 
     public:
      
+      MET() : mut::Candidate() {}
+      MET(const MET& rhs) : mut::Candidate(rhs) {}
       // inherit constructors
       using mut::Candidate::Candidate;
-
 
     protected:  
 
