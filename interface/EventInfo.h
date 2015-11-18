@@ -32,11 +32,13 @@ namespace mut {
 
       bool hasFilter(const std::string &name) const; 
       bool getFilter(const std::string &name) const; 
+      bool getFilter(const char * name) const { return getFilter(std::string(name)); }; 
       const BoolPairVector & getFilterPairs() const { return filterPairs_; } 
       void setFilterPairs(const BoolPairVector &filterPairs) { filterPairs_ = filterPairs; }
 
       bool hasWeight(const std::string &name) const; 
       float getWeight(const std::string &name) const; 
+      float getWeight(const char * name) const { return getWeight(std::string(name)); }; 
       const FloatPairVector & getWeightPairs() const { return weightPairs_; } 
       void setWeightPairs(const FloatPairVector &weightPairs) { weightPairs_ = weightPairs; } 
 
