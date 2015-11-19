@@ -54,7 +54,10 @@ namespace mut {
 
       inline unsigned int getNumPV() const { return numPV_; }
       inline void setNumPV(unsigned int numPV) { numPV_ = numPV; }
-
+      inline unsigned int getNumPU() const { return numPU_; }
+      inline void setNumPU(unsigned int numPU) { numPU_ = numPU; }
+      inline unsigned int getNumTruePU() const { return numTruePU_; }
+      inline void setNumTruePU(unsigned int numTruePU) { numTruePU_ = numTruePU; }
 
     protected:
       bool isRealData_ = false;
@@ -64,6 +67,8 @@ namespace mut {
       unsigned int run_; 
 
       unsigned int numPV_;
+      unsigned int numPU_ = 0;
+      unsigned int numTruePU_ = 0;
      
       // vector of generic event filters
       BoolPairVector filterPairs_;  

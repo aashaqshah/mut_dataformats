@@ -26,11 +26,13 @@ namespace mut {
 
       bool hasLeptonID(const std::string &name) const; 
       float getLeptonID(const std::string &name) const; 
+      float getLeptonID(const char * name) const {return getLeptonID(std::string(name)); }; 
       const PairVector & getLeptonIDPairs() const { return idPairs_; } 
       void setLeptonIDPairs(const PairVector &idPairs) { idPairs_ = idPairs; }
 
       bool hasLeptonIso(const std::string &name) const; 
       float getLeptonIso(const std::string &name) const; 
+      float getLeptonIso(const char * name) const { return getLeptonIso(std::string(name)); } 
       const PairVector & getLeptonIsoPairs() const { return isoPairs_; } 
       void setLeptonIsoPairs(const PairVector &isoPairs) { isoPairs_ = isoPairs; } 
       
