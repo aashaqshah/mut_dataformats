@@ -30,8 +30,8 @@ namespace mut {
       void setJetIDPairs(const PairVector &idPairs) { idPairs_ = idPairs; }
 
       bool hasDiscriminator(const std::string &name) const;
-      float getDiscriminator(const std::string &name) const;
-      float getDiscriminator(const char * name) const { return getDiscriminator(std::string(name)); };
+      float getDiscriminator(const std::string &name = "") const;
+      float getDiscriminator(const char * name = "") const { return getDiscriminator(std::string(name)); };
       const PairVector & getDiscriminatorPairs() const { return disPairs_; }
       void setDiscriminatorPairs(const PairVector &disPairs) { disPairs_ = disPairs; }
 

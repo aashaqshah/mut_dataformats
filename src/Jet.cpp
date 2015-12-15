@@ -25,6 +25,7 @@ namespace mut {
   }
 
   float Jet::getDiscriminator( const std::string &name ) const {
+    if ( name == "" ) return disPairs_.at(0).second;
     for( auto disPair : disPairs_)  {
       if (disPair.first == name) return disPair.second;
     }
