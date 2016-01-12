@@ -41,6 +41,8 @@ namespace mut {
       float getWeight(const char * name) const { return getWeight(std::string(name)); }; 
       const FloatPairVector & getWeightPairs() const { return weightPairs_; } 
       void setWeightPairs(const FloatPairVector &weightPairs) { weightPairs_ = weightPairs; } 
+      void emplaceWeight(const std::string &name, const float &weight)
+         { weightPairs_.emplace_back(name, weight); } 
 
       inline bool isRealData() const { return isRealData_; }
       inline void setIsRealData(bool isRealData) { isRealData_ = isRealData; }
