@@ -18,7 +18,8 @@ namespace mut {
         mut::Candidate(rhs),
         idPairs_(rhs.idPairs_),
         disPairs_(rhs.disPairs_),
-        partonFlavour_(rhs.partonFlavour_) {}
+        partonFlavour_(rhs.partonFlavour_),
+        hadronFlavour_(rhs.hadronFlavour_) {}
 
       // inherit constructors
       using mut::Candidate::Candidate;
@@ -38,6 +39,9 @@ namespace mut {
       void setPartonFlavour(const int &partonFlavour) { partonFlavour_ = partonFlavour; }
       int  getPartonFlavour() const { return partonFlavour_; }
 
+      void setHadronFlavour(const int &hadronFlavour) { hadronFlavour_ = hadronFlavour; }
+      int  getHadronFlavour() const { return hadronFlavour_; }
+
 
     protected:
       // vector of pairs with id and discriminator info
@@ -45,6 +49,7 @@ namespace mut {
       PairVector disPairs_;
       // MC based flavours (0 if data/undefined)
       int partonFlavour_ = 0;
+      int hadronFlavour_ = 0;
 
   };
 
