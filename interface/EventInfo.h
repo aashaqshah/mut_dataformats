@@ -32,13 +32,13 @@ namespace mut {
 
       bool hasFilter(const std::string &name) const; 
       bool getFilter(const std::string &name) const; 
-      bool getFilter(const char * name) const { return getFilter(std::string(name)); }; 
+      bool getFilterC(const char * name) const { return getFilter(std::string(name)); }; 
       const BoolPairVector & getFilterPairs() const { return filterPairs_; } 
       void setFilterPairs(const BoolPairVector &filterPairs) { filterPairs_ = filterPairs; }
 
       bool hasWeight(const std::string &name) const; 
       float getWeight(const std::string &name) const; 
-      float getWeight(const char * name) const { return getWeight(std::string(name)); }; 
+      float getWeightC(const char * name) const { return getWeight(std::string(name)); }; 
       const FloatPairVector & getWeightPairs() const { return weightPairs_; } 
       void setWeightPairs(const FloatPairVector &weightPairs) { weightPairs_ = weightPairs; } 
       void emplaceWeight(const std::string &name, const float &weight)
@@ -61,6 +61,11 @@ namespace mut {
       inline unsigned int getNumTruePU() const { return numTruePU_; }
       inline void setNumTruePU(unsigned int numTruePU) { numTruePU_ = numTruePU; }
 
+      inline std::string getPName() const { return pName_; }
+      inline const char * getPNameC() const { return pName_.c_str(); }
+      inline void setPName(const std::string & pName) { pName_ = pName; }
+      inline void setPNameC(const char * pName) { pName_ = pName; }
+
     protected:
       bool isRealData_ = false;
 
@@ -71,6 +76,9 @@ namespace mut {
       unsigned int numPV_;
       unsigned int numPU_ = 0;
       unsigned int numTruePU_ = 0;
+
+      //  human readable event origin
+      std::string pName_ = "";
      
       // vector of generic event filters
       BoolPairVector filterPairs_;  
