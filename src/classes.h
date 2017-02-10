@@ -5,6 +5,7 @@
 #include "mut_framework/mut_dataformats/interface/Lepton.h"
 #include "mut_framework/mut_dataformats/interface/Jet.h"
 #include "mut_framework/mut_dataformats/interface/MET.h"
+#include "mut_framework/mut_dataformats/interface/DiObject.h"
 
 namespace { struct dictionary {
   mut::EventInfo dummy0;
@@ -15,6 +16,8 @@ namespace { struct dictionary {
   mut::Jet dummy5;
   std::vector<mut::Jet> dummy6;
   mut::MET dummy7;
+  mut::DiObject dummy8;
+  std::vector<mut::DiObject> dummy9;
 };
 }
 

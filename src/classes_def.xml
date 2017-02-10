@@ -7,4 +7,6 @@
   <class name="mut::Jet"/>
   <class name="std::vector<mut::Jet>"/>
   <class name="mut::MET"/>
+  <class name="mut::DiObject"/>
+  <class name="std::vector<mut::DiObject>"/>
 </lcgdict>
