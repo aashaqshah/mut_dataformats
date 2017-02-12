@@ -16,6 +16,7 @@ namespace { struct dictionary {
   mut::Jet dummy5;
   std::vector<mut::Jet> dummy6;
   mut::MET dummy7;
+  std::vector<mut::MET> dummy7c;
   mut::DiObject dummy8;
   std::vector<mut::DiObject> dummy9;
 };

@@ -21,5 +21,7 @@ namespace mut {
 
   };
 
+  typedef std::vector<MET> METCollection;
+
 }
     
